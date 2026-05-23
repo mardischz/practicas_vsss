@@ -447,9 +447,11 @@ Ahora que tenemos nuestra field podemos interactuar con estos codigos para sacar
 Corremos ["board_est.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_est.py) toma la imagen de la cámara, detecta los ArUcos del board y calcula la posición del tablero en el espacio.
 
 Ahora corremos ["obj_det.py"](https://github.com/mardischz/practicas_vsss/blob/main/obj_det.py) 
-
+obj_det.py detecta la pelota usando color HSV y forma circular, y detecta los ArUcos de los jugadores usando OpenCV. Cuando detecta un objeto, calcula su centro, área y posición normalizada. Para los ArUcos, además calcula el ID y la orientación. 
 
 Y despues corremos ["game_det.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_est.py) 
-Este archivo junta board_est.py para encontrar la cancha. Luego detecta la pelota y los ArUcos de los carritos. Finalmente entrega un estado del juego.
+Este archivo junta board_est.py y obj_det.py para encontrar la cancha. Luego detecta la pelota y los ArUcos de los carritos. Finalmente entrega un estado del juego.
+## OJO!!
+cuando dijo corran los codigos es corre board_est.py y despues de haberlo corrido, cierran esa terminal. Corren  obj_det.py y despues de ver su resultado cierran la terminal y despues corren game_det.py. 
 
-¿Que vemos?, ¿Que pasa?
+## ¿Que vemos?, ¿Que pasa?
