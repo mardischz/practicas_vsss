@@ -446,6 +446,9 @@ Ahora que tenemos nuestra field podemos interactuar con estos codigos para sacar
 ```
 Corremos ["board_est.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_est.py) toma la imagen de la cámara, detecta los ArUcos del board y calcula la posición del tablero en el espacio.
 
+Ahora corremos ["obj_det.py"](https://github.com/mardischz/practicas_vsss/blob/main/obj_det.py) 
+
+
 Y despues corremos ["game_det.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_est.py) 
 Este archivo junta board_est.py para encontrar la cancha. Luego detecta la pelota y los ArUcos de los carritos. Finalmente entrega un estado del juego.
 
