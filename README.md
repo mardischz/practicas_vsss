@@ -166,11 +166,7 @@ http://192.168.1.20:4747/video
 
 ## 1.5 Cambiar la cámara en el código
 
-Abrir el archivo:
-
-```text
-core/cam_config.py
-```
+Abrir el archivo ["cam_config.py"](https://github.com/mardischz/practicas_vsss/blob/main/cam_config.py).:
 
 Buscar la parte donde se selecciona la cámara global.
 
@@ -192,7 +188,7 @@ Usa DroidCam como cámara principal.
 
 ## 1.6 Cambiar el IP de DroidCam
 
-En el mismo archivo de ["cam_config.py"](ahoritalopongo)
+En el mismo archivo de ["cam_config.py"](https://github.com/mardischz/practicas_vsss/blob/main/cam_config.py).
 :
 
 Buscar la función donde se define el IP de DroidCam. Debe verse parecido a esto:
@@ -215,42 +211,7 @@ Ejemplo:
 def _get_droidcam_image(rotation=None):
     ip = "http://192.168.1.20:4747/video"
 ```
-
----
-
-## 1.7 Probar que DroidCam funciona
-
-Correr:
-
-```bash
-python3 student/00_check_camera.py
-```
-
-Si todo está bien, se debe abrir una ventana con la imagen del celular.
-
-### Si no funciona
-
-Revisar:
-
-* Que el celular y la computadora estén en la misma red.
-* Que el IP esté bien escrito.
-* Que el puerto esté bien escrito.
-* Que DroidCam esté abierto en el celular.
-* Que el celular no esté bloqueado.
-* Que el URL tenga `/video` al final.
-
-Ejemplo correcto:
-
-```text
-http://192.168.1.20:4747/video
-```
-
-Ejemplo incompleto:
-
-```text
-http://192.168.1.20:4747
-```
-
+## Listo ya puedes correr  ["cam_config.py"](https://github.com/mardischz/practicas_vsss/blob/main/cam_config.py). Y debera aparecer tu camara del celular como tu camara web.
 ---
 
 # Paso 2. Calibración de la cámara
