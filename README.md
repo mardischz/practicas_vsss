@@ -192,11 +192,8 @@ Usa DroidCam como cámara principal.
 
 ## 1.6 Cambiar el IP de DroidCam
 
-En el mismo archivo:
-
-```text
-core/cam_config.py
-```
+En el mismo archivo de ["cam_config.py"](ahoritalopongo)
+:
 
 Buscar la función donde se define el IP de DroidCam. Debe verse parecido a esto:
 
