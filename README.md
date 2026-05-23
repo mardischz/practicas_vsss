@@ -463,9 +463,9 @@ AAA curiosearle chavos WUJU
 ```text
 Ahora que tenemos nuestra field podemos interactuar con estos codigos para sacar la pose estimada de la cancha, y asi saber sus coordenadas y poder usar estas coordenadas para decirle al carrito a donde ir
 ```
-Corremos["board_config.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_config.py)
+Corremos ["board_est.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_est.py) toma la imagen de la cámara, detecta los ArUcos del board y calcula la posición del tablero en el espacio.
 
-Despues ["board_est.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_est.py)
-Y despues corremos ["game_det.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_est.py)
+Y despues corremos ["game_det.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_est.py) 
+Este archivo junta board_est.py para encontrar la cancha. Luego detecta la pelota y los ArUcos de los carritos. Finalmente entrega un estado del juego.
 
 ¿Que vemos?, ¿Que pasa?
