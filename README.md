@@ -455,7 +455,7 @@ Valores que corrigen deformaciones del lente.
 
 # Después de este paso
 
-AAA JUGARRR WUJU 
+AAA curiosearle chavos WUJU 
 
 ## PASO 1 IMPRIMAMOS ESTE BOARD EN TAMAÑO HOJA ["VSSS Field v2-1.pdf"](https://github.com/mardischz/practicas_vsss/blob/main/VSSS%20Field%20v2-1.pdf)
 
@@ -463,3 +463,9 @@ AAA JUGARRR WUJU
 ```text
 Ahora que tenemos nuestra field podemos interactuar con estos codigos para sacar la pose estimada de la cancha, y asi saber sus coordenadas y poder usar estas coordenadas para decirle al carrito a donde ir
 ```
+Corremos["board_config.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_config.py)
+
+Despues ["board_est.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_est.py)
+Y despues corremos ["game_det.py"](https://github.com/mardischz/practicas_vsss/blob/main/board_est.py)
+
+¿Que vemos?, ¿Que pasa?
