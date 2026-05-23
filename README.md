@@ -457,6 +457,9 @@ Valores que corrigen deformaciones del lente.
 
 AAA JUGARRR WUJU 
 
-## PASO 1 IMPRIMAMOS ESTE BOARD EN TAMAÑO HOJA "vsss_field.png"
+## PASO 1 IMPRIMAMOS ESTE BOARD EN TAMAÑO HOJA ["VSSS Field v2-1.pdf"](https://github.com/mardischz/practicas_vsss/blob/main/VSSS%20Field%20v2-1.pdf)
 
-## PASO 2 CORRER ESTOS CODIGOS 
+## PASO 2 aja y ahora que 
+```text
+Ahora que tenemos nuestra field podemos interactuar con estos codigos para sacar la pose estimada de la cancha, y asi saber sus coordenadas y poder usar estas coordenadas para decirle al carrito a donde ir
+```
