@@ -211,7 +211,7 @@ Ejemplo:
 def _get_droidcam_image(rotation=None):
     ip = "http://192.168.1.20:4747/video"
 ```
-## Listo ya puedes correr  ["cam_config.py"](https://github.com/mardischz/practicas_vsss/blob/main/cam_config.py). Y debera aparecer tu camara del celular como tu camara web.
+## Listo ya puedes correr ["cam_config.py"](https://github.com/mardischz/practicas_vsss/blob/main/cam_config.py). Y debera aparecer tu camara del celular como tu camara web.
 ---
 
 # Paso 2. Calibración de la cámara
@@ -298,7 +298,7 @@ CHESSBOARD_SIZE = (9, 6)
 
 ## 2.4 Tomar fotos para calibración
 
-Tomar entre **10 y 30 fotos** del chessboard usando la cámara que se quiere calibrar. Estas fotos se deben de guardar en la misma carpeta en la cual se guardara el archivo "camera_calibration.py".
+Tomar entre **10 y 30 fotos** del chessboard usando la cámara que se quiere calibrar. Estas fotos se deben de guardar en la misma carpeta en la cual se guardara el archivo ["camera_calibration.py"](https://github.com/mardischz/practicas_vsss/blob/main/camera_calibration.py).
 
 Las fotos deben incluir:
 
@@ -323,11 +323,7 @@ Evitar:
 
 ## 2.5 Archivo de calibración
 
-Correr:
-
-```text
-camera_calibration.py
-```
+Correr ["camera_calibration.py"](https://github.com/mardischz/practicas_vsss/blob/main/camera_calibration.py):
 
 Este archivo se encargará de:
 
@@ -359,7 +355,7 @@ Donde:
 * `K` es la matriz intrínseca de la cámara.
 * `D` son los coeficientes de distorsión.
 
-Estos valores se usan en "cam_config.py" donde debemos actualizar nuestras funciones con nuestros valores de la camara actualizada:
+Estos valores se usan en ["cam_config.py"](https://github.com/mardischz/practicas_vsss/blob/main/cam_config.py) donde debemos actualizar nuestras funciones con nuestros valores de la camara actualizada:
 
 Ejemplo:
 
