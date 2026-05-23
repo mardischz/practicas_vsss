@@ -407,25 +407,6 @@ Validar:
 * Que las coordenadas cambian de forma lógica al mover la pelota.
 * Que el centro de la cancha esté cerca de `(0, 0)` si el board está bien configurado.
 
----
-
-# Paso 4. Checklist rápido
-
-Antes de avanzar a estrategia y control, revisar:
-
-```text
-[ ] La cámara abre correctamente.
-[ ] Si uso DroidCam, el IP y PORT están actualizados.
-[ ] La computadora y el celular están en la misma red.
-[ ] El chessboard fue medido correctamente.
-[ ] Se tomaron entre 10 y 30 fotos.
-[ ] El tablero aparece completo en las fotos.
-[ ] La calibración generó K y D.
-[ ] K y D fueron pegados en cam_config.py.
-[ ] La pelota se detecta.
-[ ] Los ArUcos se detectan.
-[ ] El board da coordenadas x, y.
-```
 
 ---
 
