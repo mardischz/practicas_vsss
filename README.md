@@ -288,21 +288,18 @@ control del robot
 
 ## 2.2 ¿Qué usamos para calibrar?
 
-Usamos un **chessboard**, que es un patrón tipo tablero de ajedrez.
+Usamos un **chessboard**, que es un patrón de tablero de ajedrez.
 
 Referencia oficial de OpenCV:
 
 ```text
 https://github.com/opencv/opencv/blob/master/doc/pattern.png
 ```
-
-El algoritmo detecta las esquinas internas del tablero y las usa para estimar los parámetros de la cámara.
-
 ---
 
 ## 2.3 Datos que necesitamos del chessboard
 
-Antes de correr la calibración, cada equipo debe medir y anotar:
+Despues de imprimir el tablero de ajedrez o usar el que tengan a la mano, Antes de correr la calibración, se deben ajustar unos valores primero en "camera_calibration.py":
 
 ### 1. Tamaño de un cuadrado
 
@@ -343,28 +340,14 @@ CHESSBOARD_SIZE = (9, 6)
 
 ## 2.4 Tomar fotos para calibración
 
-Tomar entre **10 y 30 fotos** del chessboard usando la cámara que se quiere calibrar.
+Tomar entre **10 y 30 fotos** del chessboard usando la cámara que se quiere calibrar. Estas fotos se deben de guardar en la misma carpeta en la cual se guardara el archivo "camera_calibration.py".
 
 Las fotos deben incluir:
 
-* Diferentes distancias.
-* Diferentes inclinaciones.
-* Diferentes posiciones dentro de la imagen.
+* Diferentes distancias, inclinaciones, posiciones dentro de la imagen.
 * El tablero completo visible.
 * Buena iluminación.
 * Imagen enfocada.
-
-Ejemplo de buenas tomas:
-
-```text
-Tablero al centro
-Tablero arriba
-Tablero abajo
-Tablero inclinado
-Tablero más cerca
-Tablero más lejos
-Tablero hacia una esquina
-```
 
 ### Recomendación práctica
 
@@ -382,7 +365,7 @@ Evitar:
 
 ## 2.5 Archivo de calibración
 
-Descargar o usar el archivo:
+Correr:
 
 ```text
 camera_calibration.py
@@ -398,17 +381,10 @@ Este archivo se encargará de:
 
 ---
 
-## 2.6 Espacio pendiente para el código de calibración
+## 2.6 Listoo
+AL final se generara un archivo.yaml de nombre "calibration_chessboard". Este archvio contendra los parametros obtenidos de la calibracion de la camara.
 
-> PENDIENTE: agregar aquí el código completo de `camera_calibration.py`.
-
-```python
-# Pegar aquí el código de calibración de cámara.
-```
-
----
-
-## 2.7 ¿Qué resultado esperamos?
+## ¡TENEMOS CAMARA CALIBRADA!
 
 Al final de la calibración, el programa debe entregar algo parecido a:
 
@@ -425,11 +401,7 @@ Donde:
 * `K` es la matriz intrínseca de la cámara.
 * `D` son los coeficientes de distorsión.
 
-Estos valores se usan en:
-
-```text
-core/cam_config.py
-```
+Estos valores se usan en "cam_config.py" donde debemos actualizar nuestras funciones con nuestros valores de la camara actualizada:
 
 Ejemplo:
 
@@ -442,8 +414,18 @@ webcam = Camera(
     frame_getter=_get_webcam_image
 )
 ```
+o
 
----
+```python
+droidcam = Camera(
+    K=np.array([[476.21413568, 0., 324.64535892], [0., 476.57490297, 242.01755433], [0., 0., 1.]], dtype=np.float32),
+    # D=np.array([0.37628059, 0.8828322, -4.22102342, 5.72132593], dtype=np.float32),
+    D=np.zeros(5),
+    frame_getter=_get_droidcam_image,
+    rotation=cv2.ROTATE_90_CLOCKWISE,
+    image_shape_hw=(480, 640)  # height, width before rotation
+)
+```
 
 # Paso 3. Verificación después de calibrar
 
@@ -493,66 +475,7 @@ Antes de avanzar a estrategia y control, revisar:
 
 ---
 
-# Errores comunes
-
-## Error 1. No se abre DroidCam
-
-Revisar:
-
-```text
-- ¿El celular y la computadora están en la misma red?
-- ¿El IP está bien escrito?
-- ¿El puerto está bien escrito?
-- ¿DroidCam está abierto en el celular?
-- ¿El link termina con /video?
-```
-
----
-
-## Error 2. La cámara abre pero no se ve nada
-
-Revisar:
-
-```text
-- La app del celular está bloqueada.
-- El celular perdió conexión al hotspot.
-- Se escribió mal el IP.
-- Se seleccionó otra cámara en cam_config.py.
-```
-
----
-
-## Error 3. La pelota no se detecta
-
-Solución:
-
-```text
-1. Correr 01_detect_ball_and_arucos.py.
-2. Hacer doble click sobre la pelota.
-3. Confirmar que se actualizó ball_thresholds.txt.
-```
-
----
-
-## Error 4. El chessboard no se detecta
-
-Revisar:
-
-```text
-- El tablero está completo en la imagen.
-- No está borroso.
-- No hay reflejos fuertes.
-- El número de esquinas internas está bien configurado.
-- El tamaño del cuadrado está en metros.
-```
-
----
-
 # Conceptos clave
-
-## Cámara
-
-Dispositivo que captura la imagen del campo.
 
 ## Pixel
 
@@ -574,28 +497,12 @@ Matriz que describe parámetros internos de la cámara.
 
 Valores que corrigen deformaciones del lente.
 
-## Chessboard
-
-Patrón usado para calibrar la cámara.
-
-## DroidCam
-
-Aplicación que permite usar el celular como cámara para la computadora.
-
 ---
 
 # Después de este paso
 
-Cuando la cámara ya está configurada y calibrada, el sistema está listo para avanzar a:
+AAA JUGARRR WUJU 
 
-```text
-1. Detección de pelota.
-2. Detección de jugadores con ArUco.
-3. Medición de límites de cancha.
-4. Configuración de roles.
-5. Estrategia por jugador.
-6. Control del carrito.
-7. Movimiento con BLE.
-```
+## PASO 1 IMPRIMAMOS ESTE BOARD EN TAMAÑO HOJA "vsss_field.png"
 
-Con la cámara calibrada, el robot puede trabajar con posiciones más confiables y el sistema VSSS puede tomar mejores decisiones.
+## PASO 2 CORRER ESTOS CODIGOS 
